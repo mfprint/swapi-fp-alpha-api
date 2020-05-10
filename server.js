@@ -33,7 +33,7 @@ app.use(cors({ origin: allowedOrigins }));
 API.set(app);
 
 // Listening port for the application
-const PORT = process.env.NODE_PORT || 8001;
+const PORT = process.env.PORT || 8001;
 
 // Start Express application
 app.listen(PORT, () => {
