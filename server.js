@@ -24,7 +24,7 @@ database.connect();
 // Only allow from production and development applications
 const allowedOrigins = process.env.NODE_ENV === 'development'
     ? ['http://localhost:3000']
-    : [''];
+    : ['http://swapi.mfprint.io'];
 
 // Implement cross-site origin
 app.use(cors({ origin: allowedOrigins }));
