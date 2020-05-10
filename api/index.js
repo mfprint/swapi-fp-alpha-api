@@ -1,5 +1,5 @@
 const { Router } = require('express');
-const startshipController = require('./controllers/starship.controller');
+const starshipRoutes = require('./routes/starship.routes');
 
 /*
  * Attach API to Express application
@@ -8,7 +8,7 @@ const startshipController = require('./controllers/starship.controller');
 module.exports.set = (app) => {
     const apiRouter = Router({ mergeParams: true });
 
-    apiRouter.use('/starship', startshipController);
+    apiRouter.use('/starship', starshipRoutes);
 
     app.use('/api', apiRouter);
 }

@@ -5,6 +5,7 @@ const StarshipSchema = new Schema({
     id: Schema.ObjectId,
     name: String,
     model: String,
+    originalModel: String,
     starship_class: String,
     manufacturer: String,
     cost_in_credits: String,
@@ -16,11 +17,7 @@ const StarshipSchema = new Schema({
     MGLT: String,
     cargo_capacity: String,
     consumables: String,
-    films: Array,
-    pilots: Array,
     url: String,
-    created: String,
-    edited: String
 });
 
 const Starship = mongoose.model('Starship', StarshipSchema);

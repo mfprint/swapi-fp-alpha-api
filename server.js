@@ -9,19 +9,21 @@
 const express = require('express');
 const database = require('./database');
 const cors = require('cors');
+const bodyParser = require('body-parser');
 const API = require('./api');
 
 require('dotenv').config();
 
 // Initialize Express application
 const app = express();
+app.use(bodyParser.json());
 
 // Connect to the database
 database.connect();
 
 // Only allow from production and development applications
 const allowedOrigins = process.env.NODE_ENV === 'development'
-    ? ['localhost:3000']
+    ? ['http://localhost:3000']
     : [''];
 
 // Implement cross-site origin
